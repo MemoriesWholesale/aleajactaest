@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Caesar Dressing', cursive;
+    background-color: bisque;
+}
+
+header {
+    color: darkslategray;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    justify-content: space-around;
+}
+
+header .sub-heading {
+    font-size: 24px;
+    margin: 0;
+}
+
+#gameboard {
+    height: 100vh;
+    width: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 100px;
+    margin: 0;
+}
+
+.cube-box {
+    perspective:1000px;
+    position: absolute;
+}
+
+.cube-box .front{
+    background: silver;
+    color: darkslategray;
+    transform: translateZ(50px);
+}
+
+.cube-box .back{
+    background: silver;
+    color: darkslategray;
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.cube-box .left{
+    background: silver;
+    color: darkslategray;
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.cube-box .right{
+    background: silver;
+    color: darkslategray;
+    transform: rotateY(90deg) translateZ(50px);
+
+
+}
+
+.cube-box .top{
+    background: silver;    
+    color: darkslategray;
+    transform: rotateX(90deg) translateZ(50px);
+    
+}
+
+.cube-box .bottom{
+    background: silver;
+    color: darkslategray;
+    transform: rotateX(-90deg) translateZ(50px);
+
+    
+}
+
+
+.cube-box .cube{
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+}
+
+.cube-box .cube-face {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.prevent-select {
+    user-select: none;
+}
+
+#canvas {
+    position:absolute;
+    background-color:skyblue;
+    top: 40vh;
+    left:10%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 700px;
+}
+
+#btns {
+    bottom:0%;
+    float: right;
+}
